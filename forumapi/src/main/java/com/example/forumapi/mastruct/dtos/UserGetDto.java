@@ -14,7 +14,4 @@ public class UserGetDto {
 
     @JsonProperty("username")
     private String username;
-
-    @JsonProperty("messages")
-    private Set<MessageTopicDto> messages;
 }
