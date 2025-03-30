@@ -40,7 +40,7 @@ public class TopicController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<TopicSimpleDto>> getAll(){
         return new ResponseEntity<>(
                 mapStructMapper.topicToTopicSimpleDto(
@@ -50,7 +50,7 @@ public class TopicController {
         );
     }
 
-    @GetMapping
+    @GetMapping("/id")
     public ResponseEntity<TopicMessagesDto> getById(
             @Valid @RequestParam Long id
     ){

@@ -18,7 +18,7 @@ public class Topic {
     @Column(nullable = false, unique = true)
     private String title;
 
-    @OneToMany(mappedBy = "forum", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Message> messages;
 
     public Topic() {}
