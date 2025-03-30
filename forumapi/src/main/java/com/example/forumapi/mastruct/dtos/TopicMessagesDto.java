@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class TopicAllDto {
+public class TopicMessagesDto {
     @JsonProperty("id")
     private Long id;
 
@@ -17,5 +17,5 @@ public class TopicAllDto {
     private String title;
 
     @JsonProperty("messages")
-    private Set<MessageUserDto> messages;
+    private Set<MessageTopicDto> messages;
 }

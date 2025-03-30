@@ -4,18 +4,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Set;
-
-
 @Getter
 @Setter
-public class UserPostDto {
+public class TopicSimpleDto {
     @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("username")
-    private String username;
-
-    @JsonProperty("password")
-    private String password;
+    @JsonProperty("title")
+    private String title;
 }

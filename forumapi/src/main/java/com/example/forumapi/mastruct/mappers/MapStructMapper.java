@@ -12,15 +12,22 @@ import java.util.List;
         componentModel = "spring"
 )
 public interface MapStructMapper {
-    MessageTopicDto toMessageTopicDto(Message message);
+    MessagePostDto messageToMessageDto(Message message);
 
-    MessageUserDto toMessageUserDto(Message message);
+    MessageTopicDto messageToMessageTopicDto(Message message);
 
-    TopicAllDto toTopicAllDto(Topic topic);
+    Message messagePostDtoToMessage(MessagePostDto messagePostDto);
 
-    UserGetDto toUserGetDto(User user);
+    TopicMessagesDto topicToTopicMessagesDto(Topic topic);
 
-    List<MessageTopicDto> authorsToMessageTopicDto(List<Message> messages);
+    List<TopicSimpleDto> topicToTopicSimpleDto(List<Topic> topic);
 
-    User userPostDto(UserPostDto userPostDto);
+    Topic topicAllDtoToTopic(TopicSimpleDto topicAllDto);
+
+    UserGetDto userToUserGetDto(User user);
+
+    List<MessagePostDto> authorsToMessageTopicDto(List<Message> messages);
+
+    User userPostDtotoUser(UserPostDto userPostDto);
+
 }
