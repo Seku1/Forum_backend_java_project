@@ -19,6 +19,7 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
+    // TODO passwords should be salted and hashed
     @Column(nullable = false)
     private String password;
 

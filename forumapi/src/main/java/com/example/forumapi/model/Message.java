@@ -2,7 +2,9 @@ package com.example.forumapi.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.security.Timestamp;
+
+import java.time.Instant;
+
 
 @Entity
 @Getter
@@ -25,11 +27,11 @@ public class Message {
     private String content;
 
     @Column(nullable = false)
-    private Timestamp timestamp;
+    private Instant timestamp;
 
     public Message() {}
 
-    public Message(User user, Topic topic, String content, Timestamp timestamp) {
+    public Message(User user, Topic topic, String content, Instant timestamp) {
         this.user = user;
         this.topic = topic;
         this.content = content;

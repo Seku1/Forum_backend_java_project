@@ -1,22 +1,26 @@
 package com.example.forumapi.mastruct.dtos;
 
+import com.example.forumapi.model.Topic;
+import com.example.forumapi.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.security.Timestamp;
+import java.time.Instant;
 
+
+@Setter
+@Getter
 public class MessagePostDto {
-    @JsonProperty("id")
-    private Long id;
-
-    @JsonProperty("user_id")
-    private Long user_id;
+    @JsonProperty("user")
+    private User user;
 
     @JsonProperty("content")
     private String content;
 
     @JsonProperty("timestamp")
-    private Timestamp timestamp;
+    private Instant timestamp;
 
-    @JsonProperty("topic_id")
-    private Long topic_id;
+    @JsonProperty("topic")
+    private Topic topic;
 }
